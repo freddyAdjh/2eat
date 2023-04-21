@@ -1,0 +1,1 @@
+web: gunicorn toeat.wsgi --log-file-

@@ -6,7 +6,7 @@ from django.db import models
 
 class Dish(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to="food",)
+    image = models.ImageField(upload_to="static/food",)
 
     def __str__(self):
         return self.name
@@ -42,7 +42,8 @@ class FoodShop(models.Model):
 
 class user(models.Model):
     email = models.EmailField(primary_key=True)
-    contact = models.CharField(max_length=12)
+    contact = models.CharField(max_length=13)
+    role = models.IntegerField()
 
 
 class AddShop(models.Model):
